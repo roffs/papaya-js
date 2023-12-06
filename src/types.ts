@@ -11,6 +11,6 @@ export enum ElementType {
 }
 
 export type Props = {
-    children?: Element[],
+    children: Element[],
     [key: string]: any
 }
