@@ -1,0 +1,17 @@
+{
+  "name": "papaya",
+  "module": "index.ts",
+  "devDependencies": {
+    "@types/react": "^18.2.42",
+    "@types/react-dom": "^18.2.17",
+    "bun-types": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5.0.0"
+  },
+  "scripts": {
+    "build": "bun run scripts/build.ts",
+    "start": "bun run build && bun run scripts/serve.ts"
+  },
+  "type": "module"
+}
