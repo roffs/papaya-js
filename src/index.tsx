@@ -58,6 +58,7 @@ function performUnitOfWork(fiber: Fiber): Nullable<Fiber> {
   const elements = fiber.props.children;
 
   let prevSibling: Fiber;
+
   elements
     .map((element) => ({
       type: element.type,
@@ -66,8 +67,8 @@ function performUnitOfWork(fiber: Fiber): Nullable<Fiber> {
       dom: null,
     }))
     .forEach((newFiber: Fiber, index) => {
-      prevSibling = newFiber;
       index === 0 ? (fiber.child = newFiber) : (prevSibling.sibling = newFiber);
+      prevSibling = newFiber;
     });
 
   if (fiber.child) {
@@ -100,7 +101,7 @@ function render(element: Element, container: HTMLElement) {
 const element: Element = (
   <div id="foo">
     <a>bar </a>
-    <b />
+    <b>test!</b>
   </div>
 );
 
