@@ -4,6 +4,7 @@ export type Element = {
 };
 
 export enum ElementType {
+  FRAGMENT = "",
   TEXT = "text",
   DIV = "div",
   A = "a",

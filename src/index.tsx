@@ -1,7 +1,7 @@
 /// <reference lib="dom" />
 /// <reference lib="dom.iterable" />
 
-import { Element, Fiber, Nullable } from "./types";
+import { Element, ElementType, Fiber, Nullable } from "./types";
 
 function createDomElement(fiber: Fiber): HTMLElement {
   const dom = document.createElement(fiber.type);
@@ -89,7 +89,7 @@ function performUnitOfWork(fiber: Fiber): Nullable<Fiber> {
 
 function render(element: Element, container: HTMLElement) {
   wipRoot = {
-    type: element.type,
+    type: ElementType.A,
     dom: container,
     props: {
       children: [element],
